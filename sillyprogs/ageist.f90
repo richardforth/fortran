@@ -14,6 +14,8 @@ program ageist
        print *, "Twentysomething!"
    case (67:99)
        print *, "Pensioner!"
+   case (100:)
+       print *, "Whoa......duuude!! You must have a letter from the King!"
    case default
        print *, "Get back to work!"
    end select
