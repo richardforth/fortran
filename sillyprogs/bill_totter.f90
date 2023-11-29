@@ -10,7 +10,7 @@ program bill_totter
 
     open(newunit=unit, file="bill.txt", status="OLD")
     
-    ! Assume 5 items on the bill for now ! 
+    ! read until end of file
     do 
         read(unit, *, iostat=status) item, amount
         if (status == -1) exit ! end of file
