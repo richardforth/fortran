@@ -6,15 +6,16 @@ program bill_totter
     real :: amount
     integer :: unit
     integer :: status
-    character(len=10) :: item
+    character(len=15) :: item
 
     open(newunit=unit, file="bill.txt", status="OLD")
     
     ! Assume 5 items on the bill for now ! 
-    do i = 1, 5, 1
+    do 
         read(unit, *, iostat=status) item, amount
+        if (status == -1) exit ! end of file
         total = total + amount
-        print '(a, a, F0.2, a, F0.2)', trim(item), " --> ", amount," -->", total 
+        print '(a, F0.2, a, F0.2)', item, amount," ", total
     end do
     
     print '(a, F0.2)',  "Total Amount on Bill: ", total 
