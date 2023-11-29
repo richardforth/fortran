@@ -1,4 +1,4 @@
-program take_notes
+program take_notes2
     implicit none
 
     integer :: unit
@@ -16,4 +16,4 @@ program take_notes
 
     close(unit)
 
-end program take_notes
+end program take_notes2
