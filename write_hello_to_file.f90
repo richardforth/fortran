@@ -7,4 +7,6 @@ program write_hello_to_file
 
     write(unit, *) "Hello, world!"
 
+    close(unit)
+
 end program write_hello_to_file
